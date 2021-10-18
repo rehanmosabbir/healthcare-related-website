@@ -13,7 +13,7 @@ const Services = () => {
 
   return (
     <Container>
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={3} className="g-4">
         {services.map((service) => (
           <SingleService service={service} key={service.id}></SingleService>
         ))}

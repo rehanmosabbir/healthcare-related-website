@@ -12,7 +12,7 @@ const SingleService = ({ service }) => {
           <Card.Title>{serviceName}</Card.Title>
           <Card.Text>{description}</Card.Text>
           <Link to={`/service/${id}`}>
-            <Button variant="info">Details</Button>
+            <Button variant="danger">Details</Button>
           </Link>
         </Card.Body>
       </Card>

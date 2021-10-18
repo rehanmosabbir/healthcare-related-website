@@ -1,6 +1,5 @@
-import Button from "@restart/ui/esm/Button";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -29,7 +28,7 @@ const ServiceDetails = () => {
               <Card.Title>{filteredService[0]?.serviceName}</Card.Title>
               <Card.Text>{filteredService[0]?.description}</Card.Text>
               <Link to={`/services`}>
-                <Button variant="info">Go Back</Button>
+                <Button variant="danger">Go Back</Button>
               </Link>
             </Card.Body>
           </Card>
