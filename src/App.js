@@ -38,6 +38,9 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
+            <Route path="/service/:serviceId">
+              <Services></Services>
+            </Route>
             <Route exact path="/registration">
               <Registration></Registration>
             </Route>
