@@ -12,6 +12,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import Services from "./pages/Home/Components/Services/Services";
 import Header from "./sharedComponents/Header/Header";
 import Footer from "./sharedComponents/Footer/Footer";
+import ServiceDetails from "./pages/ServiceDetails/Components/ServiceDetails/ServiceDetails";
 
 function App() {
   return (
@@ -35,12 +36,13 @@ function App() {
             <Route exact path="/contact">
               <Contact></Contact>
             </Route>
+            <Route exact path="/service/:serviceId">
+              <ServiceDetails></ServiceDetails>
+            </Route>
             <Route exact path="/services">
               <Services></Services>
             </Route>
-            <Route path="/service/:serviceId">
-              <Services></Services>
-            </Route>
+
             <Route exact path="/registration">
               <Registration></Registration>
             </Route>

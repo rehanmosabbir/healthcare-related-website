@@ -11,7 +11,7 @@ const SingleService = ({ service }) => {
         <Card.Body>
           <Card.Title>{serviceName}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Link to={`/services/${id}`}>
+          <Link to={`/service/${id}`}>
             <Button variant="info">Details</Button>
           </Link>
         </Card.Body>
