@@ -13,6 +13,7 @@ import Services from "./pages/Home/Components/Services/Services";
 import Header from "./sharedComponents/Header/Header";
 import Footer from "./sharedComponents/Footer/Footer";
 import ServiceDetails from "./pages/ServiceDetails/Components/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./pages/Login/Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -36,13 +37,12 @@ function App() {
             <Route exact path="/contact">
               <Contact></Contact>
             </Route>
-            <Route exact path="/service/:serviceId">
+            <PrivateRoute exact path="/service/:serviceId">
               <ServiceDetails></ServiceDetails>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/services">
               <Services></Services>
             </Route>
-
             <Route exact path="/registration">
               <Registration></Registration>
             </Route>

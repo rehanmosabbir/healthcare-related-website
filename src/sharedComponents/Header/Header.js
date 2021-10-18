@@ -1,11 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStethoscope } from "@fortawesome/free-solid-svg-icons";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div className="main-nav">
       <Navbar
@@ -13,7 +15,7 @@ const Header = () => {
         expand="lg"
         bg="danger"
         variant="dark"
-        className="py-2 fixed-top"
+        className="py-2 sticky-top"
       >
         <Container>
           <NavLink to="/" className="fs-5">
@@ -23,18 +25,35 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/home">Home</Link>
-              <Link to="/services">Services</Link>
-              <Link to="/doctors">Find a doctor</Link>
-              <Link to="/about">About us</Link>
-              <Link to="/contact">Contact us</Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+              <Nav.Link as={Link} to="/home">
+                Home
               </Nav.Link>
+              <Nav.Link as={Link} to="/services">
+                Services
+              </Nav.Link>
+              <Nav.Link as={Link} to="/doctors">
+                Find a doctor
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About us
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contact">
+                Contact us
+              </Nav.Link>
+              {user?.email ? (
+                <Button onClick={logOut} variant="light">
+                  Logout
+                </Button>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  Login
+                </Nav.Link>
+              )}
             </Nav>
+            <Navbar.Text>
+              Signed in as:
+              <a href="#login">{user?.displayName}</a>{" "}
+            </Navbar.Text>
           </Navbar.Collapse>
         </Container>
       </Navbar>
