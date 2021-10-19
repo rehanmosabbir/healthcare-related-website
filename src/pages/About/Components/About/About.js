@@ -15,19 +15,19 @@ const About = () => {
               Who we are?
             </h3>
             <p className="pe-5">
-              Square Hospitals Limited is a tertiary care hospital and the
-              leading contributor of private healthcare services in Bangladesh.
-              This has been achieved only through consistent commitment to
-              improve the lives of people through utmost service excellence
-              since its inception on 16th December, 2006. Square Hospital is one
-              of the ventures of Square Group which is the top business group of
-              the country.
+              Circle Hospital BD is a tertiary care hospital and the leading
+              contributor of private healthcare services in Bangladesh. This has
+              been achieved only through consistent commitment to improve the
+              lives of people through utmost service excellence since its
+              inception on 16th December, 2006. Circle Hospital is one of the
+              ventures of Circle Group which is the top business group of the
+              country.
             </p>
             <p className="pe-5">
-              The reputation of Square Hospital is the result of quality
+              The reputation of Circle Hospital is the result of quality
               clinical outcome and comprehensive care, made achievable through
               world class integrated healthcare facilities by highly trained
-              professionals. Thus, Square Hospitals strives to meet patients’
+              professionals. Thus, Circle Hospitals strives to meet patients’
               standards through quality healthcare and making a difference in
               their lives.
             </p>

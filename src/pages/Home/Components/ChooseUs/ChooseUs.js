@@ -12,7 +12,7 @@ import "./ChooseUs.css";
 const ChooseUs = () => {
   return (
     <Container className="my-5">
-      <h1 className="text-danger fw-bold text-center mt-5 mb-2">
+      <h1 className="text-danger fw-bold text-center mt-5 mb-4">
         Why choose us
       </h1>
       <hr className="w-50 m-auto mb-5" />

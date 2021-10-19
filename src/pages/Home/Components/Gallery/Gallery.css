@@ -1,0 +1,10 @@
+.gallery-img {
+  overflow: hidden;
+}
+
+.gallery-img img {
+  transition: all 0.5s ease-in-out;
+}
+.gallery-img img:hover {
+  transform: scale(1.3);
+}
