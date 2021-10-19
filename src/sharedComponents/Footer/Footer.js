@@ -9,7 +9,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="container-fluid bg-secondary text-white pt-5 mt-5">
+    <div className="container-fluid bg-secondary text-white pt-5 mt-5 text-center">
       <div className="row">
         <div className="col-md-3 col-sm-12 my-3 border-bottom  pb-5">
           <h4 className="mb-3">

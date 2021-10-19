@@ -13,6 +13,10 @@ const Services = () => {
 
   return (
     <Container>
+      <h1 className="text-danger fw-bold text-center mt-5 mb-2">
+        Our Services
+      </h1>
+      <hr className="w-50 m-auto mb-5" />
       <Row xs={1} md={3} className="g-4">
         {services.map((service) => (
           <SingleService service={service} key={service.id}></SingleService>

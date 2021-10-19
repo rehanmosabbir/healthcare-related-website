@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const ServiceDetails = () => {
   const { serviceId } = useParams();
 
   useEffect(() => {
-    fetch("/services_copy.json")
+    fetch("/services.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -19,22 +19,33 @@ const ServiceDetails = () => {
   );
 
   return (
-    <Container>
-      <Row xs={1} md={2} className="g-4">
-        <Col>
-          <Card>
-            <Card.Img variant="top" src={filteredService[0]?.img} />
-            <Card.Body>
-              <Card.Title>{filteredService[0]?.serviceName}</Card.Title>
-              <Card.Text>{filteredService[0]?.description}</Card.Text>
-              <Link to={`/services`}>
-                <Button variant="danger">Go Back</Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="container mt-5">
+      <div className="card mb-3">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img
+              src={filteredService[0]?.img}
+              className="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title border-bottom pb-3">
+                {filteredService[0]?.serviceName}
+              </h5>
+              <p className="card-text">{filteredService[0]?.description}</p>
+              <p className="card-text">
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Link to={`/services`}>
+        <Button variant="danger">Go Back</Button>
+      </Link>
+    </div>
   );
 };
 

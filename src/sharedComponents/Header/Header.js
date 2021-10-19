@@ -31,9 +31,7 @@ const Header = () => {
               <Nav.Link as={Link} to="/services">
                 Services
               </Nav.Link>
-              <Nav.Link as={Link} to="/doctors">
-                Find a doctor
-              </Nav.Link>
+
               <Nav.Link as={Link} to="/about">
                 About us
               </Nav.Link>
@@ -41,7 +39,7 @@ const Header = () => {
                 Contact us
               </Nav.Link>
               {user?.email ? (
-                <Button onClick={logOut} variant="light">
+                <Button onClick={logOut} variant="warning">
                   Logout
                 </Button>
               ) : (
@@ -51,8 +49,7 @@ const Header = () => {
               )}
             </Nav>
             <Navbar.Text>
-              Signed in as:
-              <a href="#login">{user?.displayName}</a>{" "}
+              Signed in as : <a href="#login">{user?.displayName}</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

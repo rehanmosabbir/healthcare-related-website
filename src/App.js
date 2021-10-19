@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home/Components/Home/Home";
 import NotFound from "./pages/NotFound/Components/NotFound/NotFound";
 import About from "./pages/About/Components/About/About";
-import FindDoctors from "./pages/FindDoctors/Components/FindDoctors/FindDoctors";
 import Contact from "./pages/Contact/Components/Contact/Contact";
 import Registration from "./pages/Registration/Components/Registration/Registration";
 import Login from "./pages/Login/Components/Login/Login";
@@ -28,15 +27,12 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <Route exact path="/about">
+            <PrivateRoute exact path="/about">
               <About></About>
-            </Route>
-            <Route exact path="/doctors">
-              <FindDoctors></FindDoctors>
-            </Route>
-            <Route exact path="/contact">
+            </PrivateRoute>
+            <PrivateRoute exact path="/contact">
               <Contact></Contact>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute exact path="/service/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>

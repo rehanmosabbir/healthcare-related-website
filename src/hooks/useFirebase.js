@@ -19,14 +19,14 @@ const useFirebase = () => {
   const signInWithGoogle = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-        setError("");
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    return signInWithPopup(auth, googleProvider);
+    // .then((result) => {
+    //   setUser(result.user);
+    //   setError("");
+    // })
+    // .finally(() => {
+    //   setIsLoading(false);
+    // });
   };
 
   // Observe user state change
@@ -53,7 +53,16 @@ const useFirebase = () => {
       });
   };
 
-  return { signInWithGoogle, user, error, logOut, isLoading };
+  return {
+    signInWithGoogle,
+    user,
+    error,
+    logOut,
+    isLoading,
+    setUser,
+    setError,
+    setIsLoading,
+  };
 };
 
 export default useFirebase;
