@@ -9,7 +9,7 @@ import useAuth from "../../../../hooks/useAuth";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
-
+  const [errorMessage, setErrorMessage] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
   const auth = getAuth();
@@ -51,9 +51,10 @@ const Registration = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setErrorMessage("");
       })
       .catch((error) => {
-        console.log(error.message);
+        setErrorMessage(error.message);
       });
   };
 
@@ -62,9 +63,10 @@ const Registration = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setErrorMessage("");
       })
       .catch((error) => {
-        console.log(error.message);
+        setErrorMessage(error.message);
       });
   };
 
@@ -112,7 +114,9 @@ const Registration = () => {
           className="btn btn-danger"
           value={isLogin ? "Register" : "Login"}
         />
+        <small className="text-danger ms-5">{errorMessage}</small>
       </form>
+
       <br />
       <p>
         Haven't registered yet? <Link to="/registration">Create Account</Link>
