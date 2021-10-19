@@ -1,6 +1,6 @@
 # Circle Hospital BD
 
-- Circle Hospital BD is a tertiary care hospital and the leading contributor of private healthcare services in Bangladesh. This has been achieved only through consistent commitment to improve the lives of people through utmost service excellence since its inception on 16th December, 2006.
+Circle Hospital BD is a tertiary care hospital and the leading contributor of private healthcare services in Bangladesh. This has been achieved only through consistent commitment to improve the lives of people through utmost service excellence since its inception on 16th December, 2006.
 
 https://circle-hospital-bd.web.app/
 
