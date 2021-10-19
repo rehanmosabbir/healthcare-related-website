@@ -48,11 +48,20 @@ const Header = () => {
                 </Nav.Link>
               )}
             </Nav>
-            <Navbar.Text>
-              Signed in as :{" "}
-              <a href="#login">{user?.displayName || user?.email}</a>
-              <img src={user?.photoURL} alt="" />
-            </Navbar.Text>
+            {user?.email && (
+              <Navbar.Text>
+                Signed in as :{" "}
+                <a href="#login">{user?.displayName || user?.email}</a>
+                <img
+                  src={
+                    user?.photoURL
+                      ? user?.photoURL
+                      : "https://cdn.iconscout.com/icon/free/png-256/boy-avatar-4-1129037.png"
+                  }
+                  alt=""
+                />
+              </Navbar.Text>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -121,9 +121,16 @@ const Registration = () => {
             />
           </form>
           <br />
-          <p>
-            Already have an account? <Link to="/login">login</Link>
-          </p>
+          {isLogin ? (
+            <p>
+              Haven't registered yet?{" "}
+              <Link to="/registration">Create Account</Link>
+            </p>
+          ) : (
+            <p>
+              Already have an account? <Link to="/login">login</Link>
+            </p>
+          )}
           <br />
           <p className="fw-bold">
             -------------------- or --------------------
