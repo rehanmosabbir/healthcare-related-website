@@ -20,13 +20,6 @@ const useFirebase = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
-    // .then((result) => {
-    //   setUser(result.user);
-    //   setError("");
-    // })
-    // .finally(() => {
-    //   setIsLoading(false);
-    // });
   };
 
   // Observe user state change

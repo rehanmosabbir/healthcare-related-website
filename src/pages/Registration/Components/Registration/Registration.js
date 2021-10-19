@@ -71,48 +71,44 @@ const Registration = () => {
     <div className="container">
       <h1>{isLogin ? "Login" : "Register: Create Account"}</h1>
       <form onSubmit={handleRegistration}>
-        <div class="mb-3">
-          <label for="name" class="form-label">
-            Name
-          </label>
-          <input type="name" class="form-control" id="name" />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
             Email address
           </label>
           <input
             onBlur={handleEmailChange}
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
+            required
           />
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
           <input
             onBlur={handlePasswordChange}
             type="password"
-            class="form-control"
+            className="form-control"
             id="password"
+            required
           />
         </div>
-        <div class="mb-3 form-check">
+        <div className="mb-3 form-check">
           <input
             onClick={toggleLogin}
             type="checkbox"
-            class="form-check-input"
+            className="form-check-input"
             id="check"
           />
-          <label class="form-check-label" for="check">
+          <label className="form-check-label" htmlFor="check">
             Already Registered?
           </label>
         </div>
         <input
           type="submit"
-          class="btn btn-danger"
+          className="btn btn-danger"
           value={isLogin ? "Login" : "Register"}
         />
       </form>

@@ -49,7 +49,8 @@ const Header = () => {
               )}
             </Nav>
             <Navbar.Text>
-              Signed in as : <a href="#login">{user?.displayName}</a>
+              Signed in as :{" "}
+              <a href="#login">{user?.displayName || user?.email}</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
