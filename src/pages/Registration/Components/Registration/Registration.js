@@ -50,6 +50,7 @@ const Registration = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        history.push(redirect_uri);
         console.log(user);
         setErrorMessage("");
       })
@@ -62,6 +63,7 @@ const Registration = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        history.push(redirect_uri);
         console.log(user);
         setErrorMessage("");
       })

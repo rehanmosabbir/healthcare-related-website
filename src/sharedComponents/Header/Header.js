@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStethoscope } from "@fortawesome/free-solid-svg-icons";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
+import Registration from "../../pages/Registration/Components/Registration/Registration";
 import "./Header.css";
 import useAuth from "../../hooks/useAuth";
 
@@ -34,21 +35,26 @@ const Header = () => {
               <Nav.Link as={Link} to="/blog">
                 Blog
               </Nav.Link>
-
               <Nav.Link as={Link} to="/about">
                 About us
               </Nav.Link>
               <Nav.Link as={Link} to="/contact">
-                Contact us
+                Contact
               </Nav.Link>
+
               {user?.email ? (
                 <Button onClick={logOut} variant="warning">
                   Logout
                 </Button>
               ) : (
-                <Nav.Link as={Link} to="/login">
-                  Login
-                </Nav.Link>
+                <>
+                  <Nav.Link as={Link} to="/registration">
+                    Sign up
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/login">
+                    Login
+                  </Nav.Link>
+                </>
               )}
             </Nav>
             {user?.email && (
