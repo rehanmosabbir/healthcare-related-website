@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import useAuth from "../../../../hooks/useAuth";
 
-const Registration = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [password, setPassword] = useState("");
@@ -50,6 +50,7 @@ const Registration = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        history.push(redirect_uri);
         console.log(user);
         setErrorMessage("");
       })
@@ -62,6 +63,7 @@ const Registration = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        history.push(redirect_uri);
         console.log(user);
         setErrorMessage("");
       })
@@ -155,4 +157,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Login;

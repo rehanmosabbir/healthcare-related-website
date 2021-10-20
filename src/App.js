@@ -13,6 +13,7 @@ import Header from "./sharedComponents/Header/Header";
 import Footer from "./sharedComponents/Footer/Footer";
 import ServiceDetails from "./pages/ServiceDetails/Components/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./pages/Login/Components/PrivateRoute/PrivateRoute";
+import Blog from "./pages/Blog/Components/Blog/Blog";
 
 function App() {
   return (
@@ -27,18 +28,22 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute exact path="/about">
+            <Route exact path="/about">
               <About></About>
-            </PrivateRoute>
+            </Route>
             <PrivateRoute exact path="/contact">
               <Contact></Contact>
             </PrivateRoute>
             <PrivateRoute exact path="/service/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <PrivateRoute exact path="/blog">
+              <Blog></Blog>
+            </PrivateRoute>
             <Route exact path="/services">
               <Services></Services>
             </Route>
+
             <Route exact path="/registration">
               <Registration></Registration>
             </Route>
